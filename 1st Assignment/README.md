@@ -1,29 +1,28 @@
-# DNS Investigation: Finding Real IP Addresses
+DNS Investigation: Finding Real IP Addresses
 
 [![DNS](https://img.shields.io/badge/DNS-Investigation-blue)](https://github.com/yourusername/dns-investigation)
 [![Network](https://img.shields.io/badge/Network-Reconnaissance-green)](https://github.com/yourusername/dns-investigation)
 [![Security](https://img.shields.io/badge/Security-Research-red)](https://github.com/yourusername/dns-investigation)
 
-> 🔍 **Understanding how the internet finds websites through DNS resolution**
+Understanding how the internet finds websites through DNS resolution**
 
-## 📋 Project Overview
+Project Overview
 
 This project demonstrates DNS resolution techniques and network reconnaissance using `nmap` and `dig` commands. We investigate how domain names are translated to IP addresses using **zero.webappsecurity.com** as our target.
 
-### 🎯 Learning Objectives
+Learning Objectives
 - Understand DNS resolution process
 - Learn network reconnaissance techniques
 - Practice using `nmap` and `dig` tools
 - Analyze DNS infrastructure and hosting details
-
-## 🔧 Tools Used
+ Tools Used
 
 | Tool | Purpose | Key Features |
 |------|---------|--------------|
 | `nmap -sL` | List scan for IP resolution | Hostname-to-IP mapping, reverse DNS |
 | `dig` | DNS lookup utility | Detailed DNS records, query analysis |
 
-## 📊 Investigation Results
+Investigation Results
 
 ### Target Analysis: zero.webappsecurity.com
 
@@ -41,7 +40,7 @@ $ dig zero.webappsecurity.com
 zero.webappsecurity.com. 300 IN A 54.82.22.214
 ```
 
-### 🌐 Key Findings
+Key Findings
 
 | Attribute | Value |
 |-----------|-------|
@@ -52,7 +51,7 @@ zero.webappsecurity.com. 300 IN A 54.82.22.214
 | **Web Server** | Apache |
 | **Open Ports** | 80 (HTTP), 443 (HTTPS) |
 
-## 🔄 DNS Resolution Flow
+DNS Resolution Flow
 
 ```mermaid
 flowchart TD
@@ -80,7 +79,7 @@ flowchart TD
     Q --> R[Apache Responds]
 ```
 
-## 💻 Command Reference
+Command Reference
 
 ### Basic Commands
 
@@ -117,9 +116,9 @@ dig zero.webappsecurity.com ANY
 dig -x 54.82.22.214
 ```
 
-## 🛡️ Security Context
+Security Context
 
-> ⚠️ **Important**: zero.webappsecurity.com is a **legitimate security testing platform** created by Micro Focus Fortify for educational purposes.
+**Important**: zero.webappsecurity.com is a **legitimate security testing platform** created by Micro Focus Fortify for educational purposes.
 
 ### What This Domain Is:
 - ✅ Educational security testing platform
@@ -132,35 +131,35 @@ dig -x 54.82.22.214
 - ❌ Production system
 - ❌ Unauthorized target
 
-## 🔍 Network Reconnaissance Value
+Network Reconnaissance Value
 
 Understanding DNS resolution helps with:
 
-1. **🎯 Asset Discovery**
+1. Asset Discovery**
    - Finding all IPs associated with a domain
    - Discovering subdomains and services
 
-2. **🗺️ Infrastructure Mapping**
+2. Infrastructure Mapping**
    - Identifying hosting providers
    - Understanding network topology
 
-3. **🔒 Security Assessment**
+3. Security Assessment**
    - Analyzing DNS configuration security
    - Identifying potential vulnerabilities
 
-4. **📈 Attack Surface Analysis**
+4. Attack Surface Analysis**
    - Mapping external-facing services
    - Understanding organizational infrastructure
 
-## 📚 What Each Tool Reveals
+What Each Tool Reveals
 
-### `nmap -sL` (List Scan)
+`nmap -sL` (List Scan)
 - **Purpose**: Resolve hostnames without port scanning
 - **Speed**: Very fast, no network intrusion
 - **Output**: IP addresses and reverse DNS records
 - **Use Case**: Quick IP resolution and infrastructure identification
 
-### `dig` (Domain Information Groper)
+`dig` (Domain Information Groper)
 - **Purpose**: Comprehensive DNS record analysis
 - **Detail Level**: High - shows TTL, query times, record types
 - **Flexibility**: Can query specific record types and DNS servers
